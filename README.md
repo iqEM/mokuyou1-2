@@ -272,6 +272,7 @@ Dockerの起動
 ```
 docker compose up
 ```
+#### ブラウザで確認
 EC2インスタンスのアドレス/bbsimagetest.php
 
 
