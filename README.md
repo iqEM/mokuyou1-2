@@ -268,7 +268,7 @@ $select_sth->execute();
 
 ### 動作確認
 EC2インスタンスを起動する。
-Dockerの起動
+Dockerの起動(dockertestディレクトリで下記のコマンドを実行)
 ```
 docker compose up
 ```
