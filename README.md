@@ -68,9 +68,8 @@ cd dockertest
 設定ファイルをいじっていく。
 ```
 vim compose.yml
-```
 設定ファイルの中身(compose.yml)
-```
+
 https://github.com/iqEM/mokuyou1-2/blob/c1176de834ddcd9263d1c89c4d13fdf9a790ade6/compose.yml
 ```
 ### nginx
