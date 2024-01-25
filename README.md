@@ -81,9 +81,7 @@ mkdir nginx
 mkdir nginx/conf.d
 vim nginx/conf.d/default.conf
 ```
-```
 https://github.com/iqEM/mokuyou1-2/blob/c1176de834ddcd9263d1c89c4d13fdf9a790ade6/nginx/conf.d/default.conf
-```
 配信するフォルダをつくる。
 ```
 mkdir public
