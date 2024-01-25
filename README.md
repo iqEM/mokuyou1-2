@@ -88,7 +88,11 @@ https://github.com/iqEM/mokuyou1-2/blob/c1176de834ddcd9263d1c89c4d13fdf9a790ade6
 ```
 mkdir public
 ```
-
+phpの設定ファイル
+```
+vim php.ini
+```
+https://github.com/iqEM/mokuyou1-2/blob/476f5522038218f73a08fff1ce4f738b82b4428a/php.ini
 
 ### Dockerfileの設定
 Dockerfileをカレントディレクトリに作成する。
@@ -116,11 +120,14 @@ compose.ymlで設定した内容を参照してください。
 ### テーブルの作成
 MySQLクライアントで下記のクエリを実行
 ```
-CREATE TABLE `bbs_entries` (
+CREATE TABLE `users` (
     `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `body` TEXT NOT NULL,
+    `name` TEXT NOT NULL,
+    `email` TEXT NOT NULL,
+    `password` TEXT NOT NULL,
     `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP
 );
+
 ```
 画像投稿機能の追加
 ```
@@ -134,13 +141,27 @@ SELECT * FROM テーブル名;
 ### アプリケーションの実装
 
 ファイルの作成
-```
 
+会員登録機能と登録完了画面
 ```
-中身は下記の通り
+vim public/signup.php
+vim public/signup_finish.php
 ```
+https://github.com/iqEM/mokuyou1-2/blob/476f5522038218f73a08fff1ce4f738b82b4428a/public/signup.php
+https://github.com/iqEM/mokuyou1-2/blob/476f5522038218f73a08fff1ce4f738b82b4428a/public/signup_finish.php
 
+フォロー機能
 ```
+vim public/follow.php
+```
+https://github.com/iqEM/mokuyou1-2/blob/476f5522038218f73a08fff1ce4f738b82b4428a/public/follow.php
+
+タイムライン
+```
+vim public/timeline.php
+```
+https://github.com/iqEM/mokuyou1-2/blob/476f5522038218f73a08fff1ce4f738b82b4428a/public/timeline.php
+
 
 ### 動作確認
 EC2インスタンスを起動する。
