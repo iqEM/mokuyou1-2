@@ -197,8 +197,10 @@ https://github.com/iqEM/mokuyou1-2/blob/ef66f4b24a7384cae7b11de3f23207a0a3750221
 タイムライン
 ```
 vim public/timeline.php
+vim public/timeline_json.php
 ```
 https://github.com/iqEM/mokuyou1-2/blob/476f5522038218f73a08fff1ce4f738b82b4428a/public/timeline.php
+https://github.com/iqEM/mokuyou1-2/blob/305d80a96f105d196e3de27092991ebcb6fa0a24/public/timeline_json.php
 
 会員一覧ページ
 ```
