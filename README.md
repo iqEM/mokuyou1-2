@@ -135,7 +135,12 @@ CREATE TABLE `bbs_entries` (
     `image_filename` TEXT DEFAULT NULL,
     `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP
 );
-
+CREATE TABLE `user_relationships` (
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `followee_user_id` INT UNSIGNED NOT NULL,
+    `follower_user_id` INT UNSIGNED NOT NULL,
+    `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP
+);
 ```
 画像投稿機能の追加
 ```
@@ -158,11 +163,22 @@ vim public/signup_finish.php
 https://github.com/iqEM/mokuyou1-2/blob/476f5522038218f73a08fff1ce4f738b82b4428a/public/signup.php
 https://github.com/iqEM/mokuyou1-2/blob/476f5522038218f73a08fff1ce4f738b82b4428a/public/signup_finish.php
 
+ログインとログイン完了ページ
+```
+vim public/login.php
+vim public/login_finish.php
+```
+https://github.com/iqEM/mokuyou1-2/blob/ef66f4b24a7384cae7b11de3f23207a0a3750221/public/login.php
+https://github.com/iqEM/mokuyou1-2/blob/ef66f4b24a7384cae7b11de3f23207a0a3750221/public/login_finish.php
+
 プロフィールページ
 ```
 vim public/profile.php
 ```
 https://github.com/iqEM/mokuyou1-2/blob/37597372258f457dbd559fef0e3c20d660c99337/public/profile.php
+
+ユーザー設定画面
+
 
 
 
@@ -171,6 +187,12 @@ https://github.com/iqEM/mokuyou1-2/blob/37597372258f457dbd559fef0e3c20d660c99337
 vim public/follow.php
 ```
 https://github.com/iqEM/mokuyou1-2/blob/476f5522038218f73a08fff1ce4f738b82b4428a/public/follow.php
+
+フォローしている会員一覧画面
+```
+vim public/follow_list.php
+```
+https://github.com/iqEM/mokuyou1-2/blob/ef66f4b24a7384cae7b11de3f23207a0a3750221/public/follow_list.php
 
 タイムライン
 ```
