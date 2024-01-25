@@ -127,6 +127,14 @@ CREATE TABLE `users` (
     `password` TEXT NOT NULL,
     `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP
 );
+ALTER TABLE `users` ADD COLUMN icon_filename TEXT DEFAULT NULL;
+CREATE TABLE `bbs_entries` (
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `user_id` INT UNSIGNED NOT NULL,
+    `body` TEXT NOT NULL,
+    `image_filename` TEXT DEFAULT NULL,
+    `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP
+);
 
 ```
 画像投稿機能の追加
@@ -149,6 +157,14 @@ vim public/signup_finish.php
 ```
 https://github.com/iqEM/mokuyou1-2/blob/476f5522038218f73a08fff1ce4f738b82b4428a/public/signup.php
 https://github.com/iqEM/mokuyou1-2/blob/476f5522038218f73a08fff1ce4f738b82b4428a/public/signup_finish.php
+
+プロフィールページ
+```
+vim public/profile.php
+```
+https://github.com/iqEM/mokuyou1-2/blob/37597372258f457dbd559fef0e3c20d660c99337/public/profile.php
+
+
 
 フォロー機能
 ```
