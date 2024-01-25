@@ -178,7 +178,7 @@ vim public/profile.php
 https://github.com/iqEM/mokuyou1-2/blob/37597372258f457dbd559fef0e3c20d660c99337/public/profile.php
 
 ユーザー設定画面
-
+https://github.com/iqEM/mokuyou1-2/tree/cdd6a116446f043cbae32c9bd4426271ef9b8d2c/public/setting
 
 
 
