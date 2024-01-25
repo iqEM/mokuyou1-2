@@ -71,43 +71,7 @@ vim compose.yml
 ```
 設定ファイルの中身(compose.yml)
 ```
-services:
-   web:
-     image: nginx:latest
-     ports:
-       - 80:80
-     volumes:
-       - ./nginx/conf.d/:/etc/nginx/conf.d/
-       - ./public/:/var/www/public/
-       - image:/var/www/upload/image/
-      depends_on:
-        - php
-    php:
-      container_name: php
-      build:
-        context: .
-        target: php
-      volumes:
-        - ./public/:/var/www/public/
-        - image:/var/www/upload/image/
-    mysql:
-      container_name: mysql
-      image: mysql:8.0
-      environment:
-        MYSQL_DATABASE: hoge
-        MYSQL_ALLOW_EMPTY_PASSWORD: 1
-        TZ: Asia/Tokyo
-      volumes:
-        - mysql:/var/lib/mysql
-      command: >
-        mysqld
-        --character-set-server=utf8mb4
-        --collation-server=utf8mb4_unicode_ci
-        --max_allowed_packet=4MB
-  volumes:
-    image:
-      driver: local
-    mysql:
+https://github.com/iqEM/mokuyou1-2/blob/c1176de834ddcd9263d1c89c4d13fdf9a790ade6/compose.yml
 ```
 ### nginx
 
@@ -118,25 +82,7 @@ mkdir nginx/conf.d
 vim nginx/conf.d/default.conf
 ```
 ```
-server {
-   listen  0.0.0.0:80;
-   server_name _;
-   charset utf-8;
-   root /var/www/public;
-
-   client_max_body_size 5M;
-
-   location ~ \.php$ {
-     fastcgi_pass php:9000;
-     fastcgi_index index.php;
-     fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-     include fastcgi_params;
-   }
-
-     location /image/ {
-         root /var/www/upload;
-     }
-}
+https://github.com/iqEM/mokuyou1-2/blob/c1176de834ddcd9263d1c89c4d13fdf9a790ade6/nginx/conf.d/default.conf
 ```
 配信するフォルダをつくる。
 ```
